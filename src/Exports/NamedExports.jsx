@@ -25,4 +25,5 @@ function Component3() {
 }
 
 //NAMED--> HAS TO MATCH
+//{}-<Object
 export { Component1, Component2, Component3 };
