@@ -1,18 +1,16 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
-// Default
-// Import js or jsx
-import CatsAndDogs from "./MyFile";
+import CatsAndDogs from "./Exports/MyFile";
 
-// VUE Bandler : VITE
-// FAST
-
-import "./css.css";
+// {}->NAME IS REQUIRED
+import { Component3, Component2 } from "./Exports/NamedExports";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <CatsAndDogs></CatsAndDogs>
     <CatsAndDogs />
+    <Component2 />
+    <Component3 />
   </StrictMode>
 );
