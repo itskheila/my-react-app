@@ -4,7 +4,8 @@ function ParentComponent() {
   const price = 2000;
   const onStock = true;
 
-  // <Component a={23} b={34}  />
+  // <Component a={23} b={34} key={value} key={value} />
+  // {key:value}
 
   return (
     <div>
