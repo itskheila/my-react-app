@@ -2,6 +2,8 @@ function calculatePaye(s) {
   return s * 0.16;
 }
 
+// Component Funcition(JSX)
+// Render:Display Calling a function
 function ObjData() {
   return (
     <div>
@@ -37,11 +39,6 @@ function Person2() {
     salary: 30000,
   };
 
-  //   const theAuthor = person.author;
-  //   const is_married = person.is_married;
-  //   const salary = person.salary;
-
-  // Key To Variables In An Object
   const { author, is_married, salary } = person;
 
   return (
@@ -57,10 +54,6 @@ function Person2() {
 
 function Person3() {
   let arrayData = ["John Mugi", true, 40000];
-  // Is stored Sequence :0,1,2
-  //   const author = arrayData[0];
-  //   const is_married = arrayData[1];
-  //   const salary = arrayData[2];
   const [author, is_married, salary] = arrayData;
   return (
     <div>
