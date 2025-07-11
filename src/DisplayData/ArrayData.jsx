@@ -52,6 +52,16 @@ function CardData() {
       img: "https://m.media-amazon.com/images/I/71nS6-2+oHL._AC_UL480_FMwebp_QL65_.jpg",
       price: 500,
     },
+    {
+      name: "Dress 1",
+      img: "https://m.media-amazon.com/images/I/716H7P4ga3L._AC_SY741_.jpg",
+      price: 300,
+    },
+    {
+      name: "Dress 2",
+      img: "https://m.media-amazon.com/images/I/71nS6-2+oHL._AC_UL480_FMwebp_QL65_.jpg",
+      price: 500,
+    },
   ];
 
   return (
