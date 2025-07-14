@@ -3,7 +3,7 @@ import ComponetD from "./ComponentD";
 
 function ComponentC() {
   return (
-    <div>
+    <div className="border-container">
       <ComponetD />
       <ComponentE />
     </div>

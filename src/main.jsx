@@ -7,6 +7,8 @@ import PrimitiveData from "./Props/PrimitiveData";
 
 import MiniProject from "./MiniProject";
 
+import "./css.css";
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <MiniProject />

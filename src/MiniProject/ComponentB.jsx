@@ -1,6 +1,6 @@
 function ComponentB() {
   return (
-    <div>
+    <div className="border-container">
       <h2>My blog</h2>
     </div>
   );
