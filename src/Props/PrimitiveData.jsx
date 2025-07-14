@@ -9,7 +9,13 @@ function ParentComponent() {
 
   return (
     <div>
-      <ChildComponent name={name} img={img} price={price} onStock={onStock} />
+      <ChildComponent
+        name={name}
+        img={img}
+        price={price}
+        onStock={onStock}
+        any={343}
+      />
       <ChildComponent2 name={name} img={img} price={price} onStock={onStock} />
       <ChildComponent3 name={name} img={img} price={price} onStock={onStock} />
     </div>
@@ -18,6 +24,7 @@ function ParentComponent() {
 
 // img,name,price
 function ChildComponent(props) {
+  console.log(props);
   return (
     <div>
       <h1>Child component 1</h1>
