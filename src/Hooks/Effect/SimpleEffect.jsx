@@ -1,4 +1,5 @@
 import chickenimg from "./chicky/chickychick.jpeg";
+import { useState, useEffect, useRef } from "react";
 
 function SimpleEffect() {
   
@@ -8,14 +9,6 @@ function SimpleEffect() {
 
   const [chickens, setChickens] = useState([1, 2, 3, 4, 5]);
 
-  const getStatus = () => {
-    if (showForm === true) {
-      return "Hide Form";
-    }
-    return "Show Form";
-  };
-
-  
   
   useEffect(() => {
     console.log("useEffect has run");
@@ -57,7 +50,9 @@ function SimpleEffect() {
         })}
       </div>
 
-      <button onClick={() => setShowForm(!showForm)}>{getStatus()}</button>
+      <button onClick={() => setShowForm(!showForm)}>
+        {showForm ? "Hide Form" : "Show Form"}
+      </button>
       <MyForm showForm={showForm} />
     </div>
   );
@@ -78,7 +73,7 @@ function MyForm(props) {
 }
 
 function UnMountComponent() {
-  let k = 1;
+  const k = useRef(1);
 
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
@@ -102,15 +97,15 @@ function UnMountComponent() {
     console.log("Show Form has been Mounted");
 
     //kill intrval ->
-    let inteval = setInterval(() => {
-      console.log("K is", k);
-      k = k + 1;
+    const interval = setInterval(() => {
+      console.log("K is", k.current);
+      k.current = k.current + 1;
     }, 1000);
 
     //Clean UP Function<Clean up any memory main thread>
     return () => {
       console.log("Component Unmounted");
-      clearInterval(inteval);
+      clearInterval(interval);
     };
   }, []);
 
@@ -118,8 +113,8 @@ function UnMountComponent() {
     <div>
       <h1>Unmount Component</h1>
       <div>
-        <p>X Axios {position.x}</p>
-        <p>Y Axios {position.y}</p>
+        <p>X Axis {position.x}</p>
+        <p>Y Axis {position.y}</p>
       </div>
     </div>
   );
