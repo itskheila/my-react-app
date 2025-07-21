@@ -1,16 +1,18 @@
 import Search from "./Search";
 
-import Login from "./Login";
+import All from "./All";
 
-import NavComponent from "./NavComponenet";
+import NavComponent from "./NavComponent";
+
+import { Outlet } from "react-router";
 
 function Dashboard() {
   return (
     <div>
       <h1>Dashboard Page</h1>
       <NavComponent />
-      <Search />
-      <Login />
+      <Outlet />
+      
     </div>
   );
 }
