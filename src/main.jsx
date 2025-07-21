@@ -23,11 +23,16 @@ import SimpleEffect from "./Hooks/Effect/SimpleEffect";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import ManualRoute from "./Hooks/Routing/ManualRouting"; 
+import ManualRoute from "./Routing/ManualRouting";
 
+import Dashboard from "./Routing/ReactRouter/DashBoard";
+
+import Login from "./Routing/ReactRouter/Login";
+
+import ReactRouter from "./Routing/ReactRouter";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <ManualRoute/>
+   <ReactRouter />
   </StrictMode>
 );
